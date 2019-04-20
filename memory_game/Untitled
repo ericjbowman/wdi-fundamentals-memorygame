@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Memory Card Game</title>
+  <head>
+  <body>
+    <h2>Instructions</h2>
+    <p>Concentration is a card game.</p>
+    <a href="#">Instructions</a>
+    <a href="#">Game</a>
+  </body>
+</html>
