@@ -60,12 +60,16 @@ footer {
   color: white;
   letter-spacing: .08em;
   font-weight: 500;
+  text-align: center;
 }
 .copyright {
   float: left;
 }
 .message {
   float: right;
+}
+.name {
+  color: #F15B31;
 }
 .clearfix:after {
 visibility: hidden;

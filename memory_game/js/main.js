@@ -21,25 +21,25 @@ var cards = [
   }
 ];
 var cardsInPlay = [];
-function checkForMatch() {
-  if (cardsInPlay[0] === cardsInPlay[1]) {
-  alert("You found a match!");
-  }
-  else {
-  alert("Sorry, try again.");
-  }
-}
 function flipCard() {
+  var ran = Math.random();
+  var rand = (ran * 3);
+  var rando = Math.floor(rand);
   var cardId = this.getAttribute('data-id');
-  console.log("User flipped " + cards[cardId].rank);
-  console.log(cards[cardId].suit);
-  console.log(cards[cardId].cardImage);
-  cardsInPlay.push(cards[cardId].rank);
-  this.setAttribute('src', cards[cardId].cardImage);
-  if (cardsInPlay.length === 2) {
-    checkForMatch();
+  console.log("User flipped " + cards[rando].rank);
+  console.log(cards[rando].suit);
+  console.log(cards[rando].cardImage);
+  this.setAttribute('src', cards[rando].cardImage);
+  cardsInPlay.push(cards[rando].rank);
+  if ((cardsInPlay.length === 2) && (cardsInPlay[0] === cardsInPlay[1])) {
+    alert("You found a match!");
   }
-}
+    else {
+      if ((cardsInPlay.length === 2) && (cardsInPlay[0] !== cardsInPlay[1])) {
+        alert("Sorry, try again");
+      }
+    }
+  }
 function createBoard() {
   for (var i = 0; i < cards.length; i++) {
   var cardElement = document.createElement('img');
