@@ -29,14 +29,23 @@ function checkForMatch() {
   alert("Sorry, try again.");
   }
 }
-function flipCard(cardId) {
+function flipCard() {
+  var cardId = this.getAttribute('data-id');
   console.log("User flipped " + cards[cardId].rank);
   console.log(cards[cardId].suit);
   console.log(cards[cardId].cardImage);
   cardsInPlay.push(cards[cardId].rank);
+  this.setAttribute('src', cards[cardId].cardImage);
   if (cardsInPlay.length === 2) {
     checkForMatch();
   }
 }
-flipCard(0);
-flipCard(2);
+function createBoard() {
+  for (var i = 0; i < cards.length; i++)
+  var cardElement = document.createElement('img');
+  document.cardElement.setAttribute('src', "images/back.png");
+  document.cardElement.setAttricute('data-id', i);
+  document.cardElement.addEventListener('click', 'flipCard');
+  document.getElementbyId('game-board').appendChild('cardElement');
+}
+createBoard();
