@@ -43,9 +43,9 @@ function flipCard() {
 function createBoard() {
   for (var i = 0; i < cards.length; i++)
   var cardElement = document.createElement('img');
-  document.cardElement.setAttribute('src', "images/back.png");
-  document.cardElement.setAttricute('data-id', i);
-  document.cardElement.addEventListener('click', 'flipCard');
-  document.getElementbyId('game-board').appendChild('cardElement');
+  cardElement.setAttribute('src', 'images/back.png');
+  cardElement.setAttricute('data-id', i);
+  cardElement.addEventListener('click', flipCard);
+  document.getElementbyId('game-board').appendChild(cardElement);
 }
 createBoard();
